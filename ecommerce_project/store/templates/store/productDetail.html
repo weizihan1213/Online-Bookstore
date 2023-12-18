@@ -1,0 +1,20 @@
+{% extends 'store/base/main.html' %}
+
+{% load static %}
+
+{% block content %}
+    <div class="container" style="margin-top: -10px;">
+        <dic class="row">
+            <div class="col-6" style="margin-left: -40px; position: relative">
+                <img src="{{product.imageURL}}" alt="item" style="max-width: 60%; height: 400px; position: absolute; left: 50%; top: 15%; transform: translateX(-50%); ">
+            </div>
+            <div class="col-6">
+                <a class="btn btn-outline-dark" href="{% url 'store' %}"">&#x2190; Back to Home</a>
+                <h2 class="item-name">{{product.title}}</h2>
+                <p class="item-price" style="font-family: cursive;">${{product.price}}</p>
+                <p class="item-desc" style="font-family: sans-serif;"><i>{{product.description}}</i></p>
+                <button data-product={{product.id}} data-action="add" class="btn btn-outline-primary add-btn update-cart" style="margin-top: 5px;">Add to Cart</button>
+            </div>
+        </dic>
+    </div>
+{% endblock content %}
