@@ -10,6 +10,13 @@ As for the frontend, I primarily used **_Bootstrap_** for a more modular and eas
 
 The application was eventually deployed on **_AWS EC2_**, the reason that I selected **EC2** is for the high availability and scalability provided, which fits well with our requirements that the system should be able to scale up and down as the quantity of user requests change. The database was also migrated and hosted on **_AWS RDS_** for fault-tolerant data management as a database deployment strategy. 
 
+## Why NGINX and Gunicorn?
+**Gunicorn** is a web server, written completely in Python. It can run as a standalone server and handle clients requests directly (including serving static files). However, using it this way is highly inefficient, mainly because Python itself is slow. That’s where **NGINX** comes into the picture.
+
+**NGINX** is written in C which means that it is very fast, but **NGINX** can’t run Python programs, it can only serve static files, So, the usual scenario is letting **NGINX** serve static files (the task where **NGINX** shines) and forward all dynamic requests (the ones that are expected to be handled by your Django app) to **Gunicorn**. In this situation, **NGINX** acts as a reverse proxy for a **Gunicorn** server, passing all dynamic requests to **Gunicorn**, and as a regular server for static files, handling this task on its own. So, the requests for static files never reach **Gunicorn** server.
+
+Besides, serving static assets, **NGINX** can also cache the responses from Gunicorn in the filesystem, which means that any future requests to the same URL are treated as static requests — this means that those requests will never reach **Gunicorn** and be handled completely by **NGINX**. This in turn means that a website will have a much higher performance, because we are able to skip the weakest point in the infrastructure — **Gunicorn** and use the fastest program to serve the data.
+
 * ##### Backend: Django
 * ##### Database: PostgreSQL
 * ##### Frontend: HTML5, CSS3, JavaScript, AJAX
