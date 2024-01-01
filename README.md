@@ -13,6 +13,12 @@ As for the frontend, I primarily used **_Bootstrap_** for a more modular and eas
 
 The application was eventually deployed on **_AWS EC2_**, the reason that I selected **EC2** is for the high availability and scalability provided, which fits well with our requirements that the system should be able to scale up and down as the quantity of user requests change. The database was also migrated and hosted on **_AWS RDS_** for fault-tolerant data management as a database deployment strategy. 
 
+* ##### Backend: Django
+* ##### Database: PostgreSQL
+* ##### Frontend: HTML5, CSS3, JavaScript, AJAX
+* ##### Cloud: AWS EC2, S3, RDS, Route 53
+* ##### Web Server: Nginx, Gunicorn
+
 ## Why NGINX and Gunicorn?
 **Gunicorn** is a web server, written completely in Python. It can run as a standalone server and handle clients requests directly (including serving static files). However, using it this way is highly inefficient, mainly because Python itself is slow. That’s where **NGINX** comes into the picture.
 
@@ -27,8 +33,8 @@ Besides, serving static assets, **NGINX** can also cache the responses from Guni
 
 ![nginx](https://github.com/weizihan1213/Online-Bookstore/blob/main/nginx_status.png)
 
-* ##### Backend: Django
-* ##### Database: PostgreSQL
-* ##### Frontend: HTML5, CSS3, JavaScript, AJAX
-* ##### Cloud: AWS EC2, S3, RDS, Route 53
-* ##### Web Server: Nginx, Gunicorn
+## Project Limitations
+So the first version of the project focuses primarily on the functionality of the product catalog, **CRUD** management in the shopping cart, and secure payment processing with PayPal API calls. It isn't equipped with the **User Registration & Sign up** function yet(The 'login' button for now is just a dummy button), which I am designing and working on right now, the updated version will be published later in a while, also the containerization will be integrated to make the app run up independent of the user platform.
+
+# Lessons 
+Before kicking off this project, I had little experience with Django development. Hence reading a considerable amount of chapters and doing real practice to understand Django comprehensively is necessary and significant, especially with the integration of PostgreSQL and organizing the whole application logic. I am very satisfied with what I achieved here with the effort I have been putting into it. Each technology requires a dive deep and I am confident to say that it helped me to gain a better overall understanding of the backend development.
