@@ -19,6 +19,11 @@ Besides, serving static assets, **NGINX** can also cache the responses from Guni
 
 #### Check out more information from here: [Why use NGINX and Gunicorn](https://medium.com/@HannahMel/nginx-gunicorn-and-wsgi-e1795943536e#:~:text=It%20can%20handle%20them%20very,code%20is%20executed%20when%20needed.)
 
+## NGINX and Gunicorn running status
+![gunicorn](https://github.com/weizihan1213/Online-Bookstore/blob/main/gunicorn_status.png)
+
+![nginx](https://github.com/weizihan1213/Online-Bookstore/blob/main/nginx_status.png)
+
 * ##### Backend: Django
 * ##### Database: PostgreSQL
 * ##### Frontend: HTML5, CSS3, JavaScript, AJAX
