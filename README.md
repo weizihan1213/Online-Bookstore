@@ -15,7 +15,7 @@ The application was eventually deployed on **_AWS EC2_**, the reason that I sele
 
 * ##### Backend: Django
 * ##### Database: PostgreSQL
-* ##### Frontend: HTML5, CSS3, JavaScript, AJAX
+* ##### Frontend: HTML5, CSS3, Bootstrap5, JavaScript, AJAX
 * ##### Cloud: AWS EC2, S3, RDS, Route 53
 * ##### Web Server: Nginx, Gunicorn
 
