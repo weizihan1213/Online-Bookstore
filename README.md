@@ -17,6 +17,8 @@ The application was eventually deployed on **_AWS EC2_**, the reason that I sele
 
 Besides, serving static assets, **NGINX** can also cache the responses from Gunicorn in the filesystem, which means that any future requests to the same URL are treated as static requests — this means that those requests will never reach **Gunicorn** and be handled completely by **NGINX**. This in turn means that a website will have a much higher performance, because we are able to skip the weakest point in the infrastructure — **Gunicorn** and use the fastest program to serve the data.
 
+#### Check out more information from here: [Why use NGINX and Gunicorn](https://medium.com/@HannahMel/nginx-gunicorn-and-wsgi-e1795943536e#:~:text=It%20can%20handle%20them%20very,code%20is%20executed%20when%20needed.)
+
 * ##### Backend: Django
 * ##### Database: PostgreSQL
 * ##### Frontend: HTML5, CSS3, JavaScript, AJAX
