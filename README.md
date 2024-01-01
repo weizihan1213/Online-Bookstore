@@ -3,6 +3,9 @@
 ## Project Description
 This repository is a full-stack online bookshop application offering an intuitive navigation for users to view the product catalog, manage **_CRUD_** operations in the shopping cart, and process online payment through **_PayPal API_**, ensuring secure and reliable transaction environments for users.
 
+## Project URL
+click here 👉: [MYSHOP](http://ericbookshop.com/)
+
 ## Technical Stack 
 The backend of the application is implemented using the framework of **_Python Django_**, with the **_PostgreSQL_** being utilized as the primary database solution for storing the order and user information, **PostgreSQL** comes with more robust features and better performance compared with **SQLite**, the default database embedded into the Django framework.
 
